@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="projet.css">
+<script language="javascript" type="text/javascript" >
+
+/*function essayer()
+{
+  var t1= window.document.forms[0].pays.selectedIndex;
+
+  var t2=window.document.forms[0].pays.length;
+
+  var t3=window.document.forms[0].pays.options[t1].value;
+  
+  var t4 = window.document.forms[0].pays.options[t1].text;
+
+  alert (t1);
+  alert (t2);
+  alert (t3);
+  alert (t4);
+
+  */
+     
+function verifier ()
+{
+ var bool=0;
+ for(i=1; i<3; i++)
+ { 
+var x= document.getElementById("monchamp"+i).value;
+  
+ if (x=="")
+ bool=1;
+
+ }
+ if (bool==1)
+  alert(" verifier tous les champs");
+   else
+    alert("ok");
+}
+</script>
+
+</head>
+
+<body>
+<form action="" method="get">
+<br>
+<table align="center">
+<tr><td colspan="2" align="center"><h2>Bienvenue dans mon site</h2></td></tr>
+<tr><td colspan="2"><h2>Les champs en (*) sont obligatoires</h2></td></tr>
+<tr><td>Nom*</td><td><input type="text" name="monchamp1" class="c1" id="monchamp1"required></td></tr>
+<tr><td>Message*</td><td><textarea cols="22" rows="3"name="monchamp3" class="c1"  required   ></textarea></td></tr>
+<tr><td>Password</td><td><input  type="text"  name="monchamp2" class="c1" id="monchamp2" ></td></tr>
+<tr><td>Email</td><td><input  type="email" value="" name="monchamp4" class="c1" ></td></tr>
+<tr><td>Url</td><td><input  type="url" value="" name="monchamp5" class="c1"></td></tr>
+<tr><td>Téléphone</td><td><input  type="tel" value="" name="monchamp6" class="c1"></td></tr>
+<tr><td>Number</td><td><input  type="number" value="" name="monchamp7" class="c1"></td></tr>
+<tr><td>Range</td><td><input  type="range" value="" name="monchamp8" class="c1"></td></tr>
+<tr><td>Color</td><td><input  type="color" value="#1512ff" name="monchamp9" class="c1"></td></tr>
+<tr><td>Date</td><td><input  type="date" value="" name="monchamp10" class="c1"></td></tr>
+<tr><td>Search</td><td><input  type="search" value="" name="monchamp11" class="c1"></td></tr>
+
+<tr><td>Checkbox</td><td><input  type="checkbox" value="1" name="un" class="c1"><label for="un">Un</label>
+<input  type="checkbox" value="2" name="deux" class="c1">Deux
+<input  type="checkbox" value="3" name="trois" class="c1">Trois</td></tr>
+
+
+
+
+<tr><td>Les bouttons Radio</td><td><input  type="radio" value="A" name="lettres" class="c1"><label for="un">a</label>
+  <input  type="radio" value="B" name="lettres" class="c1">b
+  <input  type="radio" value="C" name="lettres" class="c1">c</td></tr>
+ 
+ 
+ 
+<tr><td>Select</td><td><select name="pays">
+<option value="">Cliquez ici pour dérouler la liste</option>
+<optgroup label="GR1">
+<option value="Tunisie">Tunisie</option>
+<option value="France">France</option></optgroup>
+<optgroup label="GR2">
+<option value="3">Canada</option>
+<option value="4">Italie</option></optgroup>
+</select></td></tr>
+
+<tr><td align="right"><input type="button" value="Envoyer" onclick="verifier();" class="c1" ></td>
+<td align="left"><input type="reset" value="Annuler" class="c1" ></td></tr>
+</table>
+</form>
+</body>
+</html>
